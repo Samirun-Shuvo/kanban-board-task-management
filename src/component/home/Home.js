@@ -1,14 +1,26 @@
 import React from "react";
+import { useDispatch, useSelector} from "react-redux";
+import { addTaskAction } from "../../redux/Actions/AddTaskAction";
 import "./Home.css";
 
 const Home = () => {
+    const tasks = useSelector((state) => state?.tasks);
+    console.log(tasks);
+    const dispatch = useDispatch();
+    const handleAddTask = (e) => {
+      e.preventDefault();
+      if (e.target.task.value) {
+        dispatch(addTaskAction(e.target.task.value));
+        e.target.task.value = "";
+      }
+    };
   return (
     <>
       <div className="container">
         <div className="row">
           <div className="task_container">
             <div className="add_task">
-              <form className="row g-3">
+              <form onSubmit={handleAddTask} className="row g-3">
                 <div className="col-auto">
                   <input
                     type="text"
@@ -35,6 +47,14 @@ const Home = () => {
                 <div
                   className="task_box"
                 >
+                    {tasks?.taskList?.map((item, index) => (
+                    <div
+                      className="task_items"
+                      key={index}
+                    >
+                      {item}
+                    </div>
+                  ))}
                 </div>
               </div>
               <div className="card_content">
