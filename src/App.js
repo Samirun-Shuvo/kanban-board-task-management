@@ -1,11 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import Home from "./component/home/Home";
 
 function App() {
   return (
-    <div className="App">
-    kanban board
-    </div>
+    <>
+      <Home />
+    </>
   );
 }
 

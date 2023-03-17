@@ -1,0 +1,43 @@
+.task_container {
+    min-height: 500px;
+    width: 100%;
+    background: white;
+    margin: 20px auto;
+}
+.add_task{
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.task_box_container {
+    min-height: 400px;
+    margin: 10px 20px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card_content{
+    border: 1px solid rgb(209 200 200);
+    margin: 5px 0px;
+}
+.card-header {
+    padding: .5rem 1rem;
+    background: rgb(56, 171, 56);
+    border-bottom: 1px solid rgb(209 200 200);
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+.task_box {
+    width: 300px;
+    min-height: 400px;
+}
+.task_items{
+  background-color: antiquewhite;
+  border: 1px solid gainsboro;
+  margin: 8px 20px;
+  padding: 5px 60px;
+  text-align: center;
+}
